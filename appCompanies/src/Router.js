@@ -6,7 +6,9 @@ export default class RouterComponent extends Component {
     render() {
         return (
             <Router>
+                <Scene key="root">
                 <Scene component={Main} key="mainPage" initial/>
+                </Scene>
             </Router>
         );
     }
