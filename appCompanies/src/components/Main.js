@@ -7,10 +7,13 @@ import {
     Text,
     View
 } from 'react-native';
+import {connect} from 'react-redux';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {getData} from '../actions';
 const myIcon = (<Icon name="rocket" size={30} color="#900" />)
-export default class Main extends Component {
+ class Main extends Component {
     render() {
+        this.props.getData();
         return (
             <View style={styles.container}>
                 <Text style={styles.welcome}>
@@ -46,3 +49,9 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
 });
+const mapStateToProps = ({detail}) => {
+	const {loading} = detail;
+
+	return {loading};
+};
+export default connect(mapStateToProps, {getData})(Main);
