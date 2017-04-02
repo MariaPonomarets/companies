@@ -2,19 +2,19 @@
  * Created by mponomarets on 3/31/17.
  */
 import {
-	START_REQUEST
+    START_REQUEST,
+    GET_COMPANY_SUCCESS
 } from '../actions/types';
 
-const INITIAL_STATE={
-	error: false,
-	loading: true
+const INITIAL_STATE = {
+    company: {}
 };
 
-export default (state = INITIAL_STATE, action)=>{
-	switch(action.type){
-		case START_REQUEST:
-			return { ...state, loading: false};
-		default:
-			return state;
-	}
+export default (state = INITIAL_STATE, action) => {
+    switch (action.type) {
+        case GET_COMPANY_SUCCESS:
+            return {...state, company: action.payload}
+        default:
+            return state;
+    }
 };

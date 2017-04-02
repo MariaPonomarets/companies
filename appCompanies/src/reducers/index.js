@@ -3,7 +3,9 @@
  */
 import {combineReducers} from 'redux';
 import companyDetailReducer from './companyDetailReducer';
+import companiesList from './companiesListReducer';
 
 export default combineReducers({
-	detail:companyDetailReducer
+	cmpDetail:companyDetailReducer,
+    cmpList:companiesList
 });
