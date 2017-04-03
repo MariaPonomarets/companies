@@ -11,7 +11,7 @@ $ npm -g react-native-cli
 
 Then you'll need to clone repo and run app
 
- $ git clone https://github.com/MariaPonomarets/companies.gitcom.ua/integrity-vision-non-project/IntegrityMobileBPM.git
+ $ git clone https://github.com/MariaPonomarets/companies.git
 
 
  cd companies/appCompanies
