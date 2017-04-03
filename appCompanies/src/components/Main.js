@@ -32,7 +32,9 @@ class Main extends Component {
         this.props.getCompaniesList();
         if(Platform.OS=='android'){
             StatusBar.setBackgroundColor('#6A1B9A');
-        }
+        }else{
+			StatusBar.setBarStyle('light-content');
+		}
     }
 
     componentWillReceiveProps(nextProps) {
